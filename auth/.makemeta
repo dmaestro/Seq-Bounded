@@ -1,0 +1,22 @@
+use META6;
+
+my $m = META6.new(
+    name        => 'Seq::Bounded',
+    description => 'Role to apply bounds to a potentially infinite Seq',
+    version     => Version.new('1.0'),
+    perl-version => Version.new('6.*'),
+    test-depends => <Test>,
+    tags        => 'role seq',
+    authors     => ['dmaestro <dmaestro@cpan.org>'],
+    auth        => 'github:dmaestro',
+    source-url  => 'git://github.com/dmaestro/Seq-Bounded.git',
+    support     => META6::Support.new(
+        source => 'git://github.com/dmaestro/Seq-Bounded.git'
+    ),
+    provides    => {
+        'Seq::Bounded' => 'lib/Seq/Bounded.pm',
+    },
+    license     => 'Artistic',
+    production  => True,
+);
+spurt('./META6.json', $m.to-json);

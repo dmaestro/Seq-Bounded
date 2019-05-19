@@ -1,5 +1,5 @@
 use v6;
-unit role Seq::Bounded is export;
+unit role Seq::Bounded:ver<1.0> is export;
 
 multi
 method while(Seq:D: &cond --> Seq) {
