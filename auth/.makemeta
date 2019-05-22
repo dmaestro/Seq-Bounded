@@ -3,9 +3,9 @@ use META6;
 my $m = META6.new(
     name        => 'Seq::Bounded',
     description => 'Role to apply bounds to a potentially infinite Seq',
-    version     => Version.new('1.0'),
+    version     => Version.new('1.0.1'),
     perl-version => Version.new('6.*'),
-    test-depends => <Test>,
+    test-depends => <Test Test::META>,
     tags        => 'role seq',
     authors     => ['dmaestro <dmaestro@cpan.org>'],
     auth        => 'github:dmaestro',
@@ -14,9 +14,9 @@ my $m = META6.new(
         source => 'git://github.com/dmaestro/Seq-Bounded.git'
     ),
     provides    => {
-        'Seq::Bounded' => 'lib/Seq/Bounded.pm',
+        'Seq::Bounded' => 'lib/Seq/Bounded.pm6',
     },
-    license     => 'Artistic',
+    license     => 'Artistic-2.0',
     production  => True,
 );
 spurt('./META6.json', $m.to-json);
