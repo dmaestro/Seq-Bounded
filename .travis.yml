@@ -3,3 +3,5 @@ perl6:
   - latest
   - '2018.10'
   - '2017.10'
+install:
+  - zef --debug --depsonly install .
